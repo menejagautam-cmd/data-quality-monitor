@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Quality Report</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI',Tahoma,sans-serif; background:#f5f6fa; color:#2d3436; }
+        .header { background:linear-gradient(135deg,#1B2A4A,#2CA58D); color:white; padding:40px; text-align:center; }
+        .header h1 { font-size:28px; margin-bottom:8px; }
+        .header p { opacity:0.85; font-size:14px; }
+        .container { max-width:1100px; margin:0 auto; padding:30px 20px; }
+        .grade-card { background:white; border-radius:16px; padding:40px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.1); margin-bottom:30px; }
+        .grade-circle { width:120px; height:120px; border-radius:50%; background:#E88B4D; color:white; display:inline-flex; align-items:center; justify-content:center; font-size:48px; font-weight:700; margin-bottom:16px; }
+        .score-text { font-size:24px; font-weight:600; color:#1B2A4A; }
+        .section { background:white; border-radius:10px; padding:30px; margin-bottom:20px; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+        .section h2 { font-size:20px; color:#1B2A4A; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid #2CA58D; }
+        table { width:100%; border-collapse:collapse; margin-top:15px; }
+        th { background:#1B2A4A; color:white; padding:12px 16px; text-align:left; font-size:13px; text-transform:uppercase; }
+        td { padding:10px 16px; border-bottom:1px solid #eee; font-size:14px; }
+        tr:hover { background:#f8f9fa; }
+        .rec-list { padding-left:20px; }
+        .footer { text-align:center; padding:30px; color:#636e72; font-size:12px; }
+        .info-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:30px; }
+        .info-card { background:white; border-radius:10px; padding:20px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+        .info-card .value { font-size:28px; font-weight:700; color:#1B2A4A; }
+        .info-card .label { font-size:12px; color:#636e72; text-transform:uppercase; margin-top:4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Data Quality Report</h1>
+        <p>Generated May 08, 2026 at 08:49 PM | 508 rows analyzed | 14 columns</p>
+    </div>
+    <div class="container">
+        <div class="grade-card">
+            <div class="grade-circle">D</div>
+            <div class="score-text">61.3 / 100</div>
+            <p style="color:#636e72;margin-top:8px">Overall Data Quality Score</p>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="value">329</div>
+                <div class="label">Missing Values</div>
+            </div>
+            <div class="info-card">
+                <div class="value">3</div>
+                <div class="label">Duplicate Rows</div>
+            </div>
+            <div class="info-card">
+                <div class="value">6</div>
+                <div class="label">Invalid Values</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Quality Score Breakdown</h2>
+            
+        <div style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-weight:600;text-transform:capitalize">completeness</span>
+                <span>76.9/100 (C) — weight: 30%</span>
+            </div>
+            <div style="background:#e9ecef;border-radius:8px;height:24px;overflow:hidden">
+                <div style="background:#F4A940;height:100%;width:76.9%;border-radius:8px;transition:width 0.5s"></div>
+            </div>
+        </div>
+        <div style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-weight:600;text-transform:capitalize">uniqueness</span>
+                <span>65.0/100 (D) — weight: 20%</span>
+            </div>
+            <div style="background:#e9ecef;border-radius:8px;height:24px;overflow:hidden">
+                <div style="background:#E88B4D;height:100%;width:65.0%;border-radius:8px;transition:width 0.5s"></div>
+            </div>
+        </div>
+        <div style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-weight:600;text-transform:capitalize">validity</span>
+                <span>65.0/100 (D) — weight: 25%</span>
+            </div>
+            <div style="background:#e9ecef;border-radius:8px;height:24px;overflow:hidden">
+                <div style="background:#E88B4D;height:100%;width:65.0%;border-radius:8px;transition:width 0.5s"></div>
+            </div>
+        </div>
+        <div style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-weight:600;text-transform:capitalize">consistency</span>
+                <span>20.0/100 (F) — weight: 15%</span>
+            </div>
+            <div style="background:#e9ecef;border-radius:8px;height:24px;overflow:hidden">
+                <div style="background:#E8614D;height:100%;width:20.0%;border-radius:8px;transition:width 0.5s"></div>
+            </div>
+        </div>
+        <div style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-weight:600;text-transform:capitalize">timeliness</span>
+                <span>60.0/100 (D) — weight: 10%</span>
+            </div>
+            <div style="background:#e9ecef;border-radius:8px;height:24px;overflow:hidden">
+                <div style="background:#E88B4D;height:100%;width:60.0%;border-radius:8px;transition:width 0.5s"></div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="section">
+            <h2>Completeness — Missing Data</h2>
+            <table><thead><tr><th>Column</th><th>Null Count</th><th>Null %</th><th>Status</th></tr></thead><tbody><tr><td>date_completed</td><td>95</td><td>18.7%</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>cost</td><td>63</td><td>12.4%</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>notes</td><td>55</td><td>10.83%</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>customer</td><td>40</td><td>7.87%</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>location</td><td>31</td><td>6.1%</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>technician</td><td>21</td><td>4.13%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>work_order_id</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>date_submitted</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>service_type</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>priority</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>status</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>temperature</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>runtime_hours</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr><tr><td>response_time_hours</td><td>3</td><td>0.59%</td><td><span style="background:#F4A940;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">WARNING</span></td></tr></tbody></table>
+        </div>
+        
+        <div class="section">
+            <h2>Validity — Out-of-Range Values</h2>
+            <table><thead><tr><th>Column</th><th>Expected Range</th><th>Invalid Count</th><th>Sample Values</th><th>Status</th></tr></thead><tbody><tr><td>temperature</td><td>-20 to 200</td><td>2</td><td>-50.0, 350.0</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>runtime_hours</td><td>0 to 8760</td><td>1</td><td>10000.0</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>cost</td><td>0 to 100000</td><td>2</td><td>-350.0, -1200.5</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr><tr><td>response_time_hours</td><td>0 to 720</td><td>1</td><td>-4.5</td><td><span style="background:#E8614D;color:white;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600">FAIL</span></td></tr></tbody></table>
+        </div>
+        
+        <div class="section">
+            <h2>Recommendations</h2>
+            <ol class="rec-list"><li style="margin-bottom:10px;line-height:1.6"><strong>Fix missing data:</strong> Columns with highest null rates: <strong>date_completed</strong> (18.7%), <strong>cost</strong> (12.4%), <strong>notes</strong> (10.83%). Add required-field validation at the point of entry.</li><li style="margin-bottom:10px;line-height:1.6"><strong>Remove duplicates:</strong> Found 3 exact duplicate rows. Implement unique constraints on key columns like work_order_id.</li><li style="margin-bottom:10px;line-height:1.6"><strong>Add range validation:</strong> Out-of-range values detected in numeric fields. Add min/max validation rules at data entry.</li><li style="margin-bottom:10px;line-height:1.6"><strong>Standardize formats:</strong> Mixed date formats and inconsistent capitalization found. Use dropdown menus and date pickers instead of free-text entry.</li><li style="margin-bottom:10px;line-height:1.6"><strong>Validate dates:</strong> Future dates and logically impossible date sequences found. Add date range validation at entry.</li></ol>
+        </div>
+        
+        <div class="section">
+            <h2>Report Details</h2>
+            <p style="color:#636e72;line-height:1.8">
+                <strong>Dimensions checked:</strong> Completeness, Uniqueness, Validity, Consistency, Timeliness<br>
+                <strong>Configuration:</strong> quality_rules.json (weights and thresholds are fully configurable)<br>
+                <strong>Dataset:</strong> 508 rows × 14 columns
+            </p>
+        </div>
+    </div>
+    <div class="footer">Data Quality Monitor | Built with Python, pandas</div>
+</body>
+</html>
