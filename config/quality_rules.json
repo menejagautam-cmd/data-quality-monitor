@@ -1,0 +1,53 @@
+{
+    "quality_rules": {
+        "completeness": {
+            "description": "Checks for missing/null values in each column",
+            "threshold_warning": 5.0,
+            "threshold_critical": 15.0
+        },
+        "uniqueness": {
+            "description": "Checks for duplicate rows and duplicate values in key columns",
+            "key_columns": ["work_order_id", "asset_id"]
+        },
+        "validity": {
+            "description": "Checks that values fall within expected ranges or match expected patterns",
+            "numeric_ranges": {
+                "temperature": {"min": -20, "max": 200, "unit": "°F"},
+                "runtime_hours": {"min": 0, "max": 8760, "unit": "hours"},
+                "cost": {"min": 0, "max": 100000, "unit": "$"},
+                "response_time_hours": {"min": 0, "max": 720, "unit": "hours"}
+            },
+            "categorical_values": {
+                "priority": ["Low", "Medium", "High", "Emergency"],
+                "status": ["Open", "In Progress", "Completed", "Cancelled"],
+                "service_type": ["HVAC Repair", "HVAC Installation", "Plumbing Repair", "Plumbing Installation", "Preventive Maintenance", "Emergency Service", "Electrical", "General Maintenance"]
+            }
+        },
+        "consistency": {
+            "description": "Checks for format consistency within columns",
+            "date_columns": ["date_submitted", "date_completed"],
+            "expected_date_formats": ["%Y-%m-%d", "%m/%d/%Y", "%m-%d-%Y"]
+        },
+        "timeliness": {
+            "description": "Checks that dates fall within expected ranges",
+            "max_future_days": 7,
+            "max_past_days": 730
+        }
+    },
+    "scoring": {
+        "weights": {
+            "completeness": 0.30,
+            "uniqueness": 0.20,
+            "validity": 0.25,
+            "consistency": 0.15,
+            "timeliness": 0.10
+        },
+        "grade_thresholds": {
+            "A": 90,
+            "B": 80,
+            "C": 70,
+            "D": 60,
+            "F": 0
+        }
+    }
+}
